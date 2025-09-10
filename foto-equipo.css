@@ -1,0 +1,12 @@
+.info-persona{
+    margin-top: 50px;
+}
+
+.info-persona img{
+    width: 350px;
+    height: 450px;
+    border-radius: 10px;
+    float: left;
+    margin-right: 30px;
+    object-fit: cover;
+}

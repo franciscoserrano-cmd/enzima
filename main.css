@@ -1,0 +1,257 @@
+*{
+    text-decoration: none;
+    list-style-type: none;
+    
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Agdasima", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color:#1A1A1A;   
+    padding: 0;
+    margin: 0;
+    opacity: 0.9;
+}
+
+.main-content{
+    flex: 1;
+    background-color:#1A1A1A;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    opacity: 0.9;
+}
+
+#particles-js{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+    left: 0;
+}
+
+h3, h4, p, span{
+    color: rgb(189, 217, 225);
+    font-family: "Agdasima", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+h2{
+    color: rgb(189, 217, 225);
+    font-family: "Agdasima", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+h1{
+    font-family: "Agdasima", sans-serif;
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 40px;
+    color: rgb(189, 217, 225);
+}
+
+section{
+    scroll-margin-top: 50px;
+}
+
+.contacto-formulario{
+    display: flex;
+
+}
+
+.column-left{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.column-left input{
+    font-family: "Agdasima", serif;
+    font-weight: 400;
+    width: 200px;
+    height: 40px;
+}
+
+.textarea-contacto-container{
+    margin-left: 30px;      
+}
+
+.comentario-contacto{
+    font-family: "Agdasima", sans-serif;
+    font-weight: 400;
+    height: 155px;
+    width: 500px;
+    
+}
+
+.button-form{
+    height: 50px;
+}
+
+hr{
+    width: 100%;
+    height: 0.5px;
+    border: none;
+    background: #333;
+    margin-top: 60px;
+    
+}
+
+.nosotros-container{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.nosotros-p-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+    justify-content: center;
+    gap: 80px;
+}
+
+.nosotros-p{
+    width: 250px;
+    background-color:black;
+    border-radius: 10px;
+    padding: 10px 20px 0px;
+    box-shadow: 0 0 20px;
+}
+
+.nosotros-p img{
+    height: 100px;
+    width: 100px;
+}
+
+.servicios-container{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.servicios-p-container{
+    display: grid;
+    justify-content: center;
+    gap: 80px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+    margin: auto;
+}
+
+.servicios-p{
+    width: 250px;
+    background-color: black;
+    border-radius: 10px;
+    padding: 0px 20px;
+    box-shadow: 0 0 20px;
+}
+
+.contacto-container{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.list-info-contact-container{
+    margin-left: 80px;
+    margin-top: -30px;
+    width: 300px;
+}
+
+.list-info-contact-container hr{
+    width: 100%;
+    height: 0.5px;
+    border: none;
+    background: #333;
+    margin: 5px 0;
+    top: 0;
+}
+
+.list-info-contact-container p,h2{
+    margin: 0;
+}
+
+.button-form{
+    width: 100px;
+}
+
+.footer{
+    height: 50px;
+    background-color: #daf1ef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.footer-p{
+    font-family: "Agdasima", sans-serif;
+}
+
+@media (max-width: 768px){
+    .list-info-contact-container{
+        margin-left: 0;
+    }
+
+    .textarea-contacto-container{
+        margin-left: 0;
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+
+    .comentario-contacto{
+        width: 300px;
+    }
+
+    #name,#email,#phone{
+        width: 300px;
+    }
+   
+}
+
+@media (max-width: 992px){
+
+     .contacto-formulario{
+        display: block;
+        margin: auto;
+    }
+    .list-info-contact-container{
+        margin: 0;
+        width: 300px;
+    }
+
+    .textarea-contacto-container{
+        margin-left: 0;
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+
+    .comentario-contacto{
+        width: 300px;
+    }
+
+    #name,#email,#phone{
+        width: 300px;
+    }
+}
+
+
+/*Estilo video*/
+
+.video-index{
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Alto igual al viewport */
+    
+}
+
+video{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}

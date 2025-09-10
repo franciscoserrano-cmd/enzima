@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.gallery-slide {
+  width: 150px;
+  cursor: pointer;
+}
+
+.featured {
+  display: none;
+  position: relative;
+  max-width: 90%;
+  margin: 20px auto;
+  padding: 15px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.featured-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  background: rgba(0,0,0,0.3);
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+@media (max-width: 600px) {
+  .featured {
+    padding: 10px;
+  }
+  .prev, .next {
+    font-size: 24px;
+    padding: 3px 7px;
+  }
+  .close-btn {
+    font-size: 20px;
+  }
+}
+
+    </style>
+    <div class="gallery">
+  <div class="gallery-slide">
+    <img src="imagen1.jpg" alt="Imagen 1">
+    <h2>Título 1</h2>
+    <p>Descripción 1</p>
+  </div>
+  <div class="gallery-slide">
+    <img src="imagen2.jpg" alt="Imagen 2">
+    <h2>Título 2</h2>
+    <p>Descripción 2</p>
+  </div>
+  <!-- Más slides -->
+</div>
+
+<div class="featured" style="display: none;">
+  <button class="close-btn">✕</button>
+  <img id="featured-img-id" class="featured-img" src="" alt="">
+  <h2 class="title-description"></h2>
+  <p class="description"></p>
+  <button class="prev">‹</button>
+  <button class="next">›</button>
+</div>
+
+<script>
+    const thumbnails = document.querySelectorAll('.gallery-slide');
+const featured = document.querySelector('.featured');
+const featuredImg = document.querySelector('.featured-img');
+const description = document.querySelector('.description');
+const title = document.querySelector('.title-description');
+const arrowRight = document.querySelector('.next');
+const arrowLeft = document.querySelector('.prev');
+const closeBtn = document.querySelector('.close-btn');
+const gallery = document.querySelector('.gallery');
+
+let currentIndex = -1;
+
+function showFeaturedImage(index) {
+    if (index < 0 || index >= thumbnails.length) return;
+
+    thumbnails.forEach(t => t.classList.remove('hidden'));
+
+    const thumbnail = thumbnails[index];
+    thumbnail.classList.add('hidden');
+
+    const img = thumbnail.querySelector('img');
+    const h2 = thumbnail.querySelector('h2');
+    const p = thumbnail.querySelector('p');
+
+    if (img && h2 && p) {
+        featured.style.display = 'flex';
+        featuredImg.src = img.src;
+        featuredImg.alt = img.alt || h2.textContent;
+        title.textContent = h2.textContent;
+        description.textContent = p.textContent;
+
+        document.getElementById('featured-img-id')
+            .scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+        currentIndex = index;
+    }
+}
+
+thumbnails.forEach((thumbnail, index) => {
+    thumbnail.addEventListener('click', () => showFeaturedImage(index));
+});
+
+arrowLeft.addEventListener('click', () => {
+    if (currentIndex === -1) return;
+    showFeaturedImage((currentIndex - 1 + thumbnails.length) % thumbnails.length);
+});
+
+arrowRight.addEventListener('click', () => {
+    if (currentIndex === -1) return;
+    showFeaturedImage((currentIndex + 1) % thumbnails.length);
+});
+
+closeBtn.addEventListener('click', () => {
+    featured.style.display = 'none';
+    currentIndex = -1;
+    thumbnails.forEach(t => t.classList.remove('hidden'));
+    gallery.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+
+</script>
+
+</body>
+</html>
+
