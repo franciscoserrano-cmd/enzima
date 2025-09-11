@@ -15,6 +15,14 @@
     transition: background-color 0.5s;
 }
 
+.logo-navbar{
+    margin-right: auto;
+}
+
+.logo-navbar-container{
+    display: none;
+}
+
 .menu-toggle {
     display: none;
     font-size: 1.5em;
@@ -25,10 +33,6 @@
 
 .navbar.scrolled{
     background-color: cyan;
-}
-
-.menu li {
-    float: none;
 }
 
 .menu {
@@ -53,28 +57,55 @@
 
 @media (max-width: 768px) {
       .navbar {
-        display: none;
+        display: flex;
+        position: fixed;
+        background-color: cyan;
+        width: 100%;
+        transform: translateY(-100%);
+        height: 355px;
+        z-index: 1001;
         flex-direction: column;
-        background-color: #333;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        width: 200px;
-        padding: 10px 0;
+        justify-content: center;
+        align-items: center;
       }
-    
-      .menu ul.active {
-          display: flex;
+
+      .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+        margin: 0;
+        margin-top: 250px;
       }
-    
-      .menu ul li {
-        margin: 10px 0;
-        text-align: center;
+
+      .navbar.active{
+        transform: translateY(14%);
+        display: flex;
+        position: fixed;
       }
       
       .menu-toggle {
-        display: block;
-        z-index: 1000;
+        display: flex;
+        position: fixed;
+        z-index: 1002;
+        margin: 10px;
+      }
+
+      .logo-navbar{
+        display: none;
+      }
+
+      .logo-navbar-container{
+        display: flex;
+        position: fixed;
+        background-color: cyan;
+        height: 15%;
+        width: 100%;
+        z-index: 999;
+      }
+
+      .logo-navbar-menu-toggle{
+        margin: auto;
       }
     }
 

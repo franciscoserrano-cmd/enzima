@@ -78,3 +78,17 @@ closeBtn.addEventListener('click', () => {
     
     // Regresa el scroll hacia la galería
     thumbnails.scrollIntoView({ behavior: 'smooth', block: 'start' })});
+
+const toggleBtn = document.querySelector('.menu-toggle');
+const navbar = document.querySelector('.navbar');
+const menuItems = document.querySelectorAll('.menu li a');
+
+toggleBtn.addEventListener('click', () => {
+navbar.classList.toggle('active');
+
+menuItems.forEach(item => {
+  item.addEventListener('click', () => {
+    navbar.classList.remove('active');
+    });
+});
+});

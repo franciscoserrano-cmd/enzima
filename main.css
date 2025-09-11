@@ -246,7 +246,7 @@ hr{
 .video-index{
     position: relative;
     width: 100%;
-    height: 100vh; /* Alto igual al viewport */
+    height: 100vh;
     
 }
 
