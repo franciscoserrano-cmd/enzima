@@ -1,14 +1,21 @@
 
-// Función para cambiar la clase de la barra de navegación
-window.onscroll = function() {
-    var navbar = document.getElementById("navbar");
-    // Si el usuario ha hecho scroll más de 50px desde la parte superior
-    if (window.pageYOffset > 50) {
-        navbar.classList.add("scrolled");
-    } else {
-        navbar.classList.remove("scrolled");
-    }
+window.onscroll = function () {
+  var navbar = document.getElementById("navbar");
+  var letras = document.querySelectorAll(".letra-menu");
+
+  if (window.pageYOffset > 50) {
+    navbar.classList.add("scrolled");
+    letras.forEach(function (letra) {
+      letra.classList.add("scrolled");
+    });
+  } else {
+    navbar.classList.remove("scrolled");
+    letras.forEach(function (letra) {
+      letra.classList.remove("scrolled");
+    });
+  }
 };
+
 
 
 const thumbnails = document.querySelectorAll('.gallery-slide');
@@ -20,13 +27,11 @@ const arrowRight = document.querySelector('.next');
 const arrowLeft = document.querySelector('.prev');
 const closeBtn = document.querySelector('.close-btn');
 
-let currentIndex = -1; // Guardará el índice de la imagen actualmente destacada
+let currentIndex = -1;
 
-// Función para mostrar una imagen destacada según el índice
 function showFeaturedImage(index) {
     if (index < 0 || index >= thumbnails.length) return;
 
-    // Restaurar todas las miniaturas
     thumbnails.forEach(t => t.classList.remove('hidden'));
 
     const thumbnail = thumbnails[index];
@@ -50,21 +55,18 @@ function showFeaturedImage(index) {
     }
 }
 
-// Evento al hacer clic en una miniatura
 thumbnails.forEach((thumbnail, index) => {
     thumbnail.addEventListener('click', () => {
         showFeaturedImage(index);
     });
 });
 
-// Botón "anterior"
 arrowLeft.addEventListener('click', () => {
     if (currentIndex === -1) return;
     const newIndex = (currentIndex - 1 + thumbnails.length) % thumbnails.length;
     showFeaturedImage(newIndex);
 });
 
-// Botón "siguiente"
 arrowRight.addEventListener('click', () => {
     if (currentIndex === -1) return;
     const newIndex = (currentIndex + 1) % thumbnails.length;
@@ -72,9 +74,9 @@ arrowRight.addEventListener('click', () => {
 });
 
 closeBtn.addEventListener('click', () => {
-    featured.style.display = 'none';   // Oculta el bloque destacado
-    currentIndex = -1;                 // Reinicia el índice
-    thumbnails.forEach(t => t.classList.remove('hidden')); // Restaura todas las miniaturas
+    featured.style.display = 'none';  
+    currentIndex = -1;          
+    thumbnails.forEach(t => t.classList.remove('hidden')); 
     
     // Regresa el scroll hacia la galería
     thumbnails.scrollIntoView({ behavior: 'smooth', block: 'start' })});
