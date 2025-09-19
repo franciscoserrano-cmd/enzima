@@ -74,8 +74,8 @@ arrowRight.addEventListener('click', () => {
 });
 
 closeBtn.addEventListener('click', () => {
-    featured.style.display = 'none';  
-    currentIndex = -1;          
+    featured.style.display = 'none';
+    currentIndex = -1;
     thumbnails.forEach(t => t.classList.remove('hidden')); 
     
     // Regresa el scroll hacia la galería
