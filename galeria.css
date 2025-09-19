@@ -8,12 +8,16 @@
     flex-wrap: wrap;
     gap: 30px;
     justify-content: center;
-    margin: 20px auto;
+    align-items: center;
+    margin-bottom: 50px;
 }
 
 .gallery-imagen{
     position: relative;
     border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: auto;
 }
 
 .gallery-imagen img{
