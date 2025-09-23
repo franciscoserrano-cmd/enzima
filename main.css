@@ -124,7 +124,7 @@ hr{
     box-shadow: 0 0 20px;
 }
 
-.nosotros-p img{
+.servicios-p img{
     height: 100px;
     width: 100px;
 }
@@ -256,11 +256,9 @@ hr{
 
     .button-form-2{
         display: block;
-
     }
     .button-form{
         display: none;
-
     }
 }
 
