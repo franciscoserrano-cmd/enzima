@@ -1,145 +1,136 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galería Productora</title>
-  <style>
-    body {
-      font-family: "Poppins", sans-serif;
-      background: #f8f8f8;
-      margin: 0;
-      padding: 0;
-    }
+<section class="contacto-container">
+  <h1>CONTACTO</h1>
 
-    .gallery-container {
-      max-width: 1200px;
-      margin: 80px auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      padding: 0 20px;
-    }
-
-    .gallery-item {
-      position: relative;
-      overflow: hidden;
-      border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-      transform: translateY(30px);
-      opacity: 0;
-      transition: all 0.8s ease;
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      display: block;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-
-    .gallery-item:hover img {
-      transform: scale(1.05);
-    }
-
-    .overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.55);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: #fff;
-      opacity: 0;
-      transition: opacity 0.4s ease;
-      text-align: center;
-      padding: 20px;
-    }
-
-    .gallery-item:hover .overlay {
-      opacity: 1;
-    }
-
-    .overlay h3 {
-      margin: 0 0 10px;
-      font-weight: 400;
-      font-size: 1.5rem;
-      letter-spacing: 1px;
-    }
-
-    .overlay button {
-      background: #ffffff;
-      color: #000;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 30px;
-      cursor: pointer;
-      font-size: 0.9rem;
-      transition: background 0.3s ease;
-    }
-
-    .overlay button:hover {
-      background: #ddd;
-    }
-
-    /* Animación al aparecer */
-    .gallery-item.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  </style>
-</head>
-<body>
-
-  <section class="gallery-container">
-    <div class="gallery-item">
-      <img src="https://picsum.photos/600/400?1" alt="Producción 1">
-      <div class="overlay">
-        <h3>Producción 1</h3>
-        <button>Ver más</button>
-      </div>
+  <form class="contacto-formulario" id="contactForm">
+    <!-- COLUMNA IZQUIERDA -->
+    <div class="column-left">
+      <input type="text" id="name" placeholder="Nombre">
+      <input type="email" id="email" placeholder="Correo">
+      <input type="tel" id="phone" placeholder="Teléfono">
     </div>
 
-    <div class="gallery-item">
-      <img src="https://picsum.photos/600/400?2" alt="Producción 2">
-      <div class="overlay">
-        <h3>Producción 2</h3>
-        <button>Ver más</button>
-      </div>
+    <!-- COLUMNA CENTRAL -->
+    <div class="column-center">
+      <textarea class="comentario-contacto" placeholder="Mensaje"></textarea>
+      <button class="button-form">Enviar</button>
     </div>
 
-    <div class="gallery-item">
-      <img src="https://picsum.photos/600/400?3" alt="Producción 3">
-      <div class="overlay">
-        <h3>Producción 3</h3>
-        <button>Ver más</button>
-      </div>
+    <!-- COLUMNA DERECHA -->
+    <div class="list-info-contact-container">
+      <h2>Información</h2>
+      <hr>
+      <p>📍 Dirección: Av. Siempre Viva 742</p>
+      <p>📞 +56 9 1234 5678</p>
+      <p>✉️ contacto@ejemplo.com</p>
     </div>
+  </form>
+</section>
 
-    <div class="gallery-item">
-      <img src="https://picsum.photos/600/400?4" alt="Producción 4">
-      <div class="overlay">
-        <h3>Producción 4</h3>
-        <button>Ver más</button>
-      </div>
-    </div>
-  </section>
+<style>
+  .contacto-container {
+  margin: 0 50px;
+}
 
-  <script>
-    // Animación suave al hacer scroll
-    const items = document.querySelectorAll('.gallery-item');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.2 });
+/* --- CONTENEDOR PRINCIPAL --- */
+.contacto-formulario {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+}
 
-    items.forEach(item => observer.observe(item));
-  </script>
-</body>
-</html>
+/* --- COLUMNA IZQUIERDA --- */
+.column-left {
+  flex: 1 1 30%;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.column-left input {
+  height: 40px;
+  padding: 10px;
+  font-family: "Agdasima", sans-serif;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* --- COLUMNA CENTRAL (TEXTAREA) --- */
+.column-center {
+  flex: 1 1 35%;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.comentario-contacto {
+  width: 100%;
+  min-height: 150px;
+  resize: vertical;
+  font-family: "Agdasima", sans-serif;
+  font-size: 16px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.button-form {
+  align-self: flex-end;
+  width: 120px;
+  height: 45px;
+  background: #daf1ef;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.button-form:hover {
+  background: #bfe2df;
+}
+
+/* --- COLUMNA DERECHA --- */
+.list-info-contact-container {
+  flex: 1 1 25%;
+  min-width: 250px;
+}
+
+.list-info-contact-container hr {
+  height: 1px;
+  border: none;
+  background: #333;
+  margin: 10px 0;
+}
+
+.list-info-contact-container p, 
+.list-info-contact-container h2 {
+  color: rgb(189, 217, 225);
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 992px) {
+  .contacto-formulario {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .column-left, 
+  .column-center, 
+  .list-info-contact-container {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .button-form {
+    align-self: center;
+  }
+}
+
+</style>
