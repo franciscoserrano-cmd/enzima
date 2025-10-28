@@ -64,9 +64,6 @@ section{
 
 .hr-main{
     position: relative;
-    left: 50%;
-    width: 100vw;
-    margin-left: -50vw;
     height: 0.5px;
     border: none;
     background: #333;
