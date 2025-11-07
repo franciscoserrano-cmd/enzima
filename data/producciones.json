@@ -1,0 +1,42 @@
+[
+  {
+    "id": "p001",
+    "title": "Reel - Acción",
+    "category": "action",
+    "thumb": "img/Producciones/Action1.jpg",
+    "image": "img/Producciones/Action1.jpg",
+    "year": 2023,
+    "description": "Corto de acción con montaje dinámico y cámara en mano.",
+    "video": "videos/reels_andres.mp4"
+  },
+  {
+    "id": "p002",
+    "title": "Corto Fantasía",
+    "category": "fantasy",
+    "thumb": "img/Producciones/action2.jpg",
+    "image": "img/Producciones/action2.jpg",
+    "year": 2022,
+    "description": "Proyecto de fantasía con efectos prácticos y color grading.",
+    "video": null
+  },
+  {
+    "id": "p003",
+    "title": "Thriller Urbano",
+    "category": "thriller",
+    "thumb": "img/Producciones/action2.jpg",
+    "image": "img/Producciones/action2.jpg",
+    "year": 2021,
+    "description": "Thriller psicológico filmado en locaciones urbanas.",
+    "video": null
+  },
+  {
+    "id": "p004",
+    "title": "Romance - Cortometraje",
+    "category": "romance",
+    "thumb": "img/Producciones/action2.jpg",
+    "image": "img/Producciones/action2.jpg",
+    "year": 2020,
+    "description": "Pequeña historia de amor visualmente cuidada.",
+    "video": null
+  }
+]

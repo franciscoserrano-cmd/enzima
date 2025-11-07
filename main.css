@@ -269,3 +269,46 @@ video{
     height: 100%;
     object-fit:cover;
 }
+
+/* Productions modal (hidden by default) */
+.productions-modal{
+  display: none; /* hidden until opened by JS */
+  position: fixed;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  background: rgba(0,0,0,0.7);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+}
+.productions-modal .productions-modal-inner{
+  background: #0f0f0f;
+  border-radius: 8px;
+  max-width: 900px;
+  width: 90%;
+  max-height: 90vh;
+  overflow: auto;
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  gap: 1rem;
+}
+.productions-modal .modal-close{
+  position: absolute;
+  right: 12px;
+  top: 8px;
+  background: transparent;
+  border: none;
+  color: #daf1ef;
+  font-size: 24px;
+  cursor: pointer;
+}
+.productions-modal .modal-media img{
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+.productions-modal .modal-info{
+  color: #dbeff0;
+  flex: 1 1 auto;
+}

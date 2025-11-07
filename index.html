@@ -100,24 +100,8 @@
                             <span class="item" data-name="mystery">Mystery</span>
                         </div>
                     </nav>
-                    <div class="gallery">
-                        <div class="image" data-name="action"><span><img src="img/Producciones/Action1.jpg" alt=""></span></div>
-                        <div class="image" data-name="action"><span><img src="img/Producciones/action2.jpg" alt=""></span></div>
-                        <div class="image" data-name="action"><span><img src="img/Producciones/action2.jpg" alt=""></span></div>
-                        <div class="image" data-name="fantasy"><span><img src="img/Producciones/action2.jpg" alt=""></span></div>
-                        <div class="image" data-name="fantasy"><span><img src="img/Producciones/action2.jpg" alt=""></span></div>
-                        <div class="image" data-name="fantasy"><span><img src="img/Producciones/action2.jpg" alt=""></span></div>
-                        <div class="image" data-name="fantasy"><span><img src="img/Producciones/action2.jpg" alt=""></span></div>
-                        <div class="image" data-name="fiction"><span><img src="img/Producciones/action2.jpg" alt=""></span></div>
-                        <div class="image" data-name="fiction"><span><img src="img/Producciones/action2.jpg" alt=""></span></div>
-                        <div class="image" data-name="fiction"><span><img src="img/Producciones/action2.jpg" alt=""></span></div>
-                        <div class="image" data-name="fiction"><span><img src="img/Producciones/action2.jpg" alt=""></span></div>
-                        <div class="image" data-name="fiction"><span><img src="img/Producciones/action2.jpg" alt=""></span></div>
-                        <div class="image" data-name="mystery"><span><img src="img/Producciones/action2.jpg" alt=""></span></div>
-                        <div class="image" data-name="mystery"><span><img src="img/Producciones/action2.jpg" alt=""></span></div>
-                        <div class="image" data-name="romance"><span><img src="img/Producciones/action2.jpg" alt=""></span></div>
-                        <div class="image" data-name="thriller"><span><img src="img/Producciones/action2.jpg" alt=""></span></div>
-                    </div>
+                    <!-- Dynamic productions gallery: populated from data/producciones.json by js/producciones.js -->
+                    <div id="productions-gallery" class="gallery" aria-live="polite"></div>
                 </div>
                     
                 </div>
@@ -234,6 +218,7 @@
     </div>
     
     <script src="js/main.js"></script>
+    <script src="js/producciones.js"></script>
     <script src="js/particles.min.js"></script>
     <script src="js/particles.js"></script>
   
