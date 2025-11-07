@@ -83,6 +83,10 @@
   .gallery .image{
     width: calc(800px / 3);
   }
+    .wrapper nav .items{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 @media (max-width: 700px) {

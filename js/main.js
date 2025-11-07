@@ -78,7 +78,6 @@ closeBtn.addEventListener('click', () => {
     currentIndex = -1;
     thumbnails.forEach(t => t.classList.remove('hidden')); 
     
-    // Regresa el scroll hacia la galería
     thumbnails.scrollIntoView({ behavior: 'smooth', block: 'start' })});
 
 const toggleBtn = document.querySelector('.menu-toggle');
@@ -99,7 +98,7 @@ menuItems.forEach(item => {
 const filterItem = document.querySelector(".items");
 const filterImg = document.querySelectorAll(".gallery .image");
 
-window.onload = ()=>{ 
+window.onload = ()=>{
   filterItem.onclick = (selectedItem)=>{ 
     if(selectedItem.target.classList.contains("item")){ 
       filterItem.querySelector(".active").classList.remove("active");

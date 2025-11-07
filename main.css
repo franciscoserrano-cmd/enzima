@@ -1,11 +1,17 @@
 *{
     text-decoration: none;
     list-style-type: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     
 }
 
 html{
     scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+   
 }
 
 body{
@@ -17,6 +23,7 @@ body{
     padding: 0;
     margin: 0;
     opacity: 0.9;
+   
 }
 
 main{
@@ -63,6 +70,9 @@ section{
 }
 
 .hr-main{
+    left: 50%;
+    width: 100vw;
+    margin-left: -50vw;
     position: relative;
     height: 0.5px;
     border: none;
