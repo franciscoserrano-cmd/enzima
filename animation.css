@@ -1,0 +1,16 @@
+.reveal,
+.reveal-left{
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+
+.reveal-left{
+    transform: translateX(-40px);
+}
+
+.reveal.show,
+.reveal-left.show{
+    opacity: 1;
+    transform: translate(0);
+}
