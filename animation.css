@@ -1,5 +1,7 @@
 .reveal,
-.reveal-left{
+.reveal-left,
+.reveal-up,
+.reveal-right {
     opacity: 0;
     transform: translateY(30px);
     transition: all 0.6s ease-out;
@@ -8,9 +10,20 @@
 .reveal-left{
     transform: translateX(-40px);
 }
+.reveal-up{
+    transform: translateY(-40px);
+}
+.reveal-right{
+    transform: translateX(40px);
+}
 
 .reveal.show,
-.reveal-left.show{
+.reveal-left.show,
+.reveal-right.show{
     opacity: 1;
     transform: translate(0);
 }
+
+.delay-1 { transition-delay: .15s; }
+.delay-2 { transition-delay: .3s; }
+.delay-3 { transition-delay: .45s; }
