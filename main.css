@@ -113,24 +113,72 @@ section{
 }
 
 .servicios-container{
-    margin-left: 50px;
-    margin-right: 50px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .servicios-p-container{
     display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
-    margin: auto;
-    gap: 80px;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.5rem;
+}
+
+.servicios-p{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.servicios-p:nth-child(1),
+.servicios-p:nth-child(2),
+.servicios-p:nth-child(3) {
+    grid-column: span 2;
+}
+
+.servicios-p:nth-child(4){
+  grid-column: 2 / span 2;
+}
+.servicios-p:nth-child(5){
+  grid-column: 4 / span 2;
 }
 
 .servicios-p{
     width: 250px;
-    background-color: black;
-    border-radius: 10px;
-    padding: 0px 20px;
-    box-shadow: 0 0 20px;
+    position: relative;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 16px;
+    transition: 0.3s ease;
+}
+
+.servicios-p:hover {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.servicios-p h2{
+    position: relative;
+    display: inline-block;
+}
+
+.servicios-p h2::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.servicios-p:hover h2::after{
+    transform: scaleX(1);
 }
 
 .contacto-container {
@@ -217,7 +265,7 @@ section{
 }
 
 /* --- RESPONSIVE --- */
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
   .contacto-formulario {
     flex-direction: column;
     align-items: center;
@@ -232,6 +280,21 @@ section{
 
   .button-form {
     align-self: center;
+  }
+
+  .servicios-p-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .servicios-p {
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+} 
+
+@media (max-width: 600px) {
+  .servicios-p-container {
+    grid-template-columns: 1fr;
   }
 }
 

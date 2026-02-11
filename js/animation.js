@@ -1,4 +1,4 @@
-const reveals = document.querySelectorAll(".reveal, .reveal-left, .reveal-up , .reveal-right");
+const reveals = document.querySelectorAll(".disclose, .disclose-left, .disclose-up , .disclose-right");
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
