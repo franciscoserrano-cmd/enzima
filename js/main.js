@@ -94,6 +94,13 @@ menuItems.forEach(item => {
 });
 });
 
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 1024) {
+    navbar.classList.remove("active");
+  }
+});
+
+
 
 const filterItem = document.querySelector(".items");
 const filterImg = document.querySelectorAll(".gallery .image");
