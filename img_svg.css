@@ -1,0 +1,12 @@
+.icono {
+  width: 100px;
+  height: 100px;
+}
+
+.icono .stroke {
+  stroke: white;
+  
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
