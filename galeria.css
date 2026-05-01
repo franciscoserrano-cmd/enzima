@@ -176,17 +176,18 @@
 
 @media(max-width: 768px){
     .featured-content{
-        width: 400px;
+        width: min(400px, 100%);
+        max-width: 100%;
         display: block;
         text-align: center;
     }
     .featured img{
-        width: 200px;
+        width: min(200px, 100%);
         height: auto;
         margin-bottom: 0;
     }
     .desc-featured-content-container hr{
-        width: 250px;
+        width: min(250px, 100%);
         margin-left: auto;
         margin-right: auto;
     }
@@ -196,5 +197,6 @@
         margin-left: auto;
         margin-right: auto;
         width: 80%;
+        max-width: 100%;
     }
 }
