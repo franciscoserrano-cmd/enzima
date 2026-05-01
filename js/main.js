@@ -2,6 +2,16 @@
 window.onscroll = function () {
   var navbar = document.getElementById("navbar");
   var letras = document.querySelectorAll(".letra-menu");
+  var logo1 = document.querySelector(".logo-1");
+  var logo2 = document.querySelector(".logo-2");
+
+  if (window.pageYOffset > 50) {
+    logo1.style.display = "none";
+    logo2.style.display = "block";
+  } else {
+    logo1.style.display = "block";
+    logo2.style.display = "none";
+  }
 
   if (window.pageYOffset > 50) {
     navbar.classList.add("scrolled");
