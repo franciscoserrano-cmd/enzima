@@ -134,3 +134,16 @@ previewImg = previewBox.querySelector("img"),
 closeIcon = previewBox.querySelector(".icon"),
 shadow = document.querySelector(".shadow");
 
+
+const btnNosotros = document.querySelector('a[href="#nosotros"]');
+
+btnNosotros.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  const section = document.querySelector('#nosotros');
+
+  section.scrollIntoView({
+    behavior: 'smooth',
+    block: 'center'
+  });
+});
