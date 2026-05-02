@@ -32,6 +32,8 @@ html{
 main{
     max-width: 1500px;
     margin: auto;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 #particles-js{
@@ -228,6 +230,18 @@ section{
   }
 }
 
+@media (max-width: 768px) {
+  .contacto-container {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .contacto-container {
+    padding: 0 2rem;
+  }
+}
+
 @media (min-width: 1025px) {
   .contacto-formulario {
     flex-wrap: nowrap;
@@ -316,6 +330,7 @@ section{
   .list-info-contact-container {
     width: 100%;
     max-width: 400px;
+    min-width: auto;
   }
 
   .button-form {
