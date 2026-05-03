@@ -30,6 +30,16 @@
     }
 }
 
+.logo-1 img, .logo-2 img{
+    height: 40px; 
+    width: 58px; 
+    margin-top: 5px;
+    filter: drop-shadow(0 0 6px #19a1d2)
+            drop-shadow(0 0 12px #1d97cf)
+            drop-shadow(0 0 25px #0d5e94);
+
+}
+
 .logo-navbar{
     margin-right: auto;
 }
