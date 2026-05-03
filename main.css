@@ -52,6 +52,10 @@ h3, h4, p, span{
     font-weight: 150;
 }
 
+.parrafo-nosotros{
+    line-height: 30px;
+}
+
 h2{
     color: rgb(189, 217, 225);
     font-family: "Oswald", sans-serif;
