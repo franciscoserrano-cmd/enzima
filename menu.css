@@ -78,7 +78,7 @@
 
 .letra-menu {
     display: block;
-    color: cyan;
+    color: rgb(224, 255, 255);
     text-align: center;
     text-shadow: 0 0 5px #19a1d2, 0 0 10px #1d97cf, 0 0 20px #0d5e94;
     margin-left: 0;
@@ -157,5 +157,5 @@
     }
 
 .navbar li a:hover{
-    color: rgb(158, 154, 148);
+    color: white;
 }
