@@ -1,8 +1,3 @@
-// Renderer for productions gallery
-// - Loads data/producciones.json
-// - Renders thumbnails into #productions-gallery
-// - Adds filtering by category (uses same nav .items .item elements)
-// - Adds a simple modal/lightbox with title & description
 
 (async function(){
   const dataUrl = 'data/producciones.json';
@@ -49,10 +44,8 @@
     return div;
   }
 
-  // render
   productions.forEach(p => gallery.appendChild(createCard(p)));
 
-  // --- filter logic (re-uses existing .items nav) ---
   const filterItem = document.querySelector('.items');
   function applyFilter(filterName){
     const imgs = gallery.querySelectorAll('.image');
@@ -79,7 +72,6 @@
     });
   }
 
-  // --- modal ---
   let modalEl = document.getElementById('productions-modal');
   if (!modalEl) {
     modalEl = document.createElement('div');
@@ -96,7 +88,6 @@
       </div>
     `;
     document.body.appendChild(modalEl);
-    // ensure modal is hidden by default (prevents stray button showing)
     modalEl.style.display = 'none';
   }
 
