@@ -121,17 +121,22 @@ section{
 .nosotros-container-2 {
   max-width: 800px;
   text-align: center;
+  justify-content: center;
 }
 
 #nosotros{
   display: flex;
-  height: 100vh;
+  height: 80vh;
   justify-content: center;
   align-items: center;
   scroll-margin-top: 0;
   padding: 0;
   margin: 0;
 }
+
+#equipo{
+  min-height: 71vh;
+  }
 
 .servicios-p img{
     height: 100px;
@@ -189,10 +194,6 @@ section{
 .servicios-p h2{
     position: relative;
     display: inline-block;
-}
-
-#equipo{
-  height: 100vh;
 }
 
 
