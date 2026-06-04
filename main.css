@@ -45,7 +45,7 @@ main{
     pointer-events: none;
 }
 
-.titulo{
+.titulo{  
   margin-bottom: 50px;
 }
 
@@ -116,7 +116,6 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -50px;
 }
 
 .nosotros-container-2 {
@@ -126,10 +125,12 @@ section{
 
 #nosotros{
   display: flex;
-  min-height: 87vh;
+  height: 100vh;
   justify-content: center;
   align-items: center;
   scroll-margin-top: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .servicios-p img{
@@ -188,6 +189,10 @@ section{
 .servicios-p h2{
     position: relative;
     display: inline-block;
+}
+
+#equipo{
+  height: 100vh;
 }
 
 
