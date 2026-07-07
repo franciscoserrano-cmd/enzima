@@ -30,11 +30,9 @@
     meta.className = 'production-meta';
     const h3 = document.createElement('h3');
     h3.textContent = p.title + ' (' + p.year + ')';
-    const pdesc = document.createElement('p');
-    pdesc.textContent = p.description;
-    meta.appendChild(h3);
-    meta.appendChild(pdesc);
+   
 
+    meta.appendChild(h3);
     div.appendChild(span);
     div.appendChild(meta);
 

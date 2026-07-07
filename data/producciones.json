@@ -1,32 +1,72 @@
 [
   {
     "id": "p001",
-    "title": "Reel - Acción",
-    "category": "action",
-    "thumb": "img/Producciones/proyecto_1.jpg",
-    "image": "img/Producciones/proyecto_1.jpg",
-    "year": 2023,
+    "title": "Lo mejor/Lo Peor",
+    "category": "videoclip",
+    "thumb": "img/Producciones/III_puñales_lo_mejor_lo_peor.jpg",
+    "image": "img/Producciones/III_puñales_lo_mejor_lo_peor.jpg",
+    "year": 2024,
     "description": "Corto de acción con montaje dinámico y cámara en mano.",
     "video": null
   },
   {
     "id": "p002",
-    "title": "Corto Fantasía",
-    "category": "fantasy",
-    "thumb": "img/Producciones/proyecto_2.jpg",
-    "image": "img/Producciones/proyecto_2.jpg",
-    "year": 2022,
+    "title": "Ni de carne ni de pan",
+    "category": "videoclip",
+    "thumb": "img/Producciones/III_puñales_ni_de_carne_ni_de_pan.jpg",
+    "image": "img/Producciones/III_puñales_ni_de_carne_ni_de_pan.jpg",
+    "year": 2025,
     "description": "Proyecto de fantasía con efectos prácticos y color grading.",
     "video": null
   },
   {
     "id": "p003",
-    "title": "Thriller Urbano",
-    "category": "thriller",
-    "thumb": "img/Producciones/proyecto_3.jpg",
-    "image": "img/Producciones/proyecto_3.jpg",
+    "title": "Mons Tera",
+    "category": "videoclip",
+    "thumb": "img/Producciones/mons_tera.jpg",
+    "image": "img/Producciones/mons_tera.jpg",
     "year": 2021,
-    "description": "Thriller psicológico filmado en locaciones urbanas.",
+    "description": "Teaser Sesión de estudio",
+    "video": null
+  },
+  {
+    "id": "p004",
+    "title": "Romance",
+    "category": "romance",
+    "thumb": "img/Producciones/proyecto_4.jpg",
+    "image": "img/Producciones/proyecto_4.jpg",
+    "year": 2020,
+    "description": "Pequeña historia de amor visualmente cuidada.",
+    "video": null
+  },
+  {
+    "id": "p004",
+    "title": "Romance",
+    "category": "romance",
+    "thumb": "img/Producciones/proyecto_4.jpg",
+    "image": "img/Producciones/proyecto_4.jpg",
+    "year": 2020,
+    "description": "Pequeña historia de amor visualmente cuidada.",
+    "video": null
+  },
+  {
+    "id": "p004",
+    "title": "Romance",
+    "category": "romance",
+    "thumb": "img/Producciones/proyecto_4.jpg",
+    "image": "img/Producciones/proyecto_4.jpg",
+    "year": 2020,
+    "description": "Pequeña historia de amor visualmente cuidada.",
+    "video": null
+  },
+  {
+    "id": "p004",
+    "title": "Romance",
+    "category": "romance",
+    "thumb": "img/Producciones/proyecto_4.jpg",
+    "image": "img/Producciones/proyecto_4.jpg",
+    "year": 2020,
+    "description": "Pequeña historia de amor visualmente cuidada.",
     "video": null
   },
   {
