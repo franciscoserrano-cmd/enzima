@@ -13,7 +13,7 @@
 
   const gallery = document.getElementById('productions-gallery');
   if (!gallery) return;
-
+  
   function createCard(p) {
     const div = document.createElement('div');
     div.className = 'image show';

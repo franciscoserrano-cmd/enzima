@@ -1,9 +1,9 @@
 
 window.onscroll = function () {
-  var navbar = document.getElementById("navbar");
-  var letras = document.querySelectorAll(".letra-menu");
-  var logo1 = document.querySelector(".logo-1");
-  var logo2 = document.querySelector(".logo-2");
+  let navbar = document.getElementById("navbar");
+  let letras = document.querySelectorAll(".letra-menu");
+  let logo1 = document.querySelector(".logo-1");
+  let logo2 = document.querySelector(".logo-2");
 
   if (window.pageYOffset > 50) {
     logo1.style.display = "none";
