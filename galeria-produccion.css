@@ -11,7 +11,7 @@
 }
 .wrapper{
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 1000px;
 }
 .wrapper nav{
   display: flex;
@@ -46,10 +46,12 @@
   margin-top: 30px;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 18px;
 }
 .gallery .image{
-  width: calc(200% / 5);
+  flex: 0 1 calc((100% - 36px) / 3);
+  width: calc((100% - 36px) / 3);
+  max-width: 340px;
   padding: 7px;
   position: relative;
   cursor: pointer;
@@ -154,7 +156,8 @@
     margin: 5px;
   }
   .gallery .image{
-    width: 60%;
-    margin: auto;
+    width: calc(100% - 20px);
+    max-width: 460px;
+    margin: 0 auto;
   }
 }
