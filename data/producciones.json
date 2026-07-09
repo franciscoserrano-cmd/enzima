@@ -5,18 +5,8 @@
     "category": "videoclip",
     "thumb": "img/Producciones/III_puñales_lo_mejor_lo_peor.jpg",
     "image": "img/Producciones/III_puñales_lo_mejor_lo_peor.jpg",
-    "year": 2024,
+    "year": 2026,
     "description": "Corto de acción con montaje dinámico y cámara en mano.",
-    "video": null
-  },
-  {
-    "id": "p002",
-    "title": "Ni de carne ni de pan",
-    "category": "videoclip",
-    "thumb": "img/Producciones/III_puñales_ni_de_carne_ni_de_pan.jpg",
-    "image": "img/Producciones/III_puñales_ni_de_carne_ni_de_pan.jpg",
-    "year": 2025,
-    "description": "Proyecto de fantasía con efectos prácticos y color grading.",
     "video": null
   },
   {
@@ -25,28 +15,28 @@
     "category": "videoclip",
     "thumb": "img/Producciones/mons_tera.jpg",
     "image": "img/Producciones/mons_tera.jpg",
-    "year": 2021,
+    "year": 2026,
     "description": "Teaser Sesión de estudio",
     "video": null
   },
   {
-    "id": "p004",
-    "title": "Feed",
-    "category": "cine",
-    "thumb": "img/Producciones/enzima.jpg",
-    "image": "img/Producciones/enzima.jpg",
-    "year": 2020,
-    "description": "Pequeña historia de amor visualmente cuidada.",
+    "id": "p002",
+    "title": "Ni de carne ni de pan",
+    "category": "videoclip",
+    "thumb": "img/Producciones/III_puñales_ni_de_carne_ni_de_pan.jpg",
+    "image": "img/Producciones/III_puñales_ni_de_carne_ni_de_pan.jpg",
+    "year": 2024,
+    "description": "Proyecto de fantasía con efectos prácticos y color grading.",
     "video": null
   },
   {
     "id": "p005",
-    "title": "Velada",
+    "title": "Pelicula Velada",
     "category": "cine",
     "thumb": "img/Producciones/velada.jpg",
     "image": "img/Producciones/velada.jpg",
     "year": 2024,
-    "description": "Pequeña historia de amor visualmente cuidada.",
+    "description": "Corto experimental de no ficcria de amor visualmente cuidada.",
     "video": null
   },
   {
@@ -56,7 +46,17 @@
     "thumb": "img/Producciones/persiana.jpg",
     "image": "img/Producciones/persiana.jpg",
     "year": 2022,
-    "description": "",
+    "description": "Mediometraje, documental de ensayo experimental. ",
+    "video": null
+  },
+  {
+    "id": "p004",
+    "title": "Feed",
+    "category": "cine",
+    "thumb": "img/Producciones/enzima.jpg",
+    "image": "img/Producciones/enzima.jpg",
+    "year": 2020,
+    "description": "Corto documental de ensayo experimental. ",
     "video": null
   },
   {

@@ -13,10 +13,23 @@
 
   const gallery = document.getElementById('productions-gallery');
   if (!gallery) return;
-  
-  function createCard(p) {
+
+  function getDelayClass(index) {
+    const delayMap = ['delay-1', 'delay-2', 'delay-3', 'delay-4', 'delay-5', 'delay-6'];
+    return delayMap[index % delayMap.length];
+  }
+
+  function resetCardAnimation(card, index) {
+    card.className = `image disclose ${getDelayClass(index)}`;
+    card.classList.remove('show');
+    card.classList.remove('observed');
+    card.style.opacity = '';
+    card.style.transform = '';
+  }
+
+  function createCard(p, index) {
     const div = document.createElement('div');
-    div.className = 'image show';
+    resetCardAnimation(div, index);
     div.setAttribute('data-name', p.category);
     div.setAttribute('data-id', p.id);
 
@@ -42,28 +55,39 @@
     return div;
   }
 
-  productions.forEach(p => gallery.appendChild(createCard(p)));
-
   const filterItem = document.querySelector('.items');
-  function applyFilter(filterName){
-    const imgs = gallery.querySelectorAll('.image');
-    imgs.forEach(image => {
-      const name = image.getAttribute('data-name');
-      if (filterName === 'all' || name === filterName) {
-        image.classList.remove('hide');
-        image.classList.add('show');
-      } else {
-        image.classList.add('hide');
-        image.classList.remove('show');
+  function renderGallery(filterName = 'all') {
+    gallery.innerHTML = '';
+    const filteredProductions = filterName === 'all'
+      ? productions
+      : productions.filter((p) => p.category === filterName);
+
+    filteredProductions.forEach((p, index) => gallery.appendChild(createCard(p, index)));
+
+    requestAnimationFrame(() => {
+      if (window.observeReveals) {
+        window.observeReveals();
       }
     });
   }
+
+  function applyFilter(filterName) {
+    renderGallery(filterName);
+  }
+
+  renderGallery('all');
 
   if (filterItem) {
     filterItem.addEventListener('click', (ev)=>{
       const target = ev.target;
       if (!target.classList.contains('item')) return;
-      filterItem.querySelector('.active').classList.remove('active');
+
+      const currentActive = filterItem.querySelector('.active');
+      if (currentActive === target) return;
+
+      if (currentActive) {
+        currentActive.classList.remove('active');
+      }
       target.classList.add('active');
       const filterName = target.getAttribute('data-name');
       applyFilter(filterName);
