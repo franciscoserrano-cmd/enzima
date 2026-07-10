@@ -40,6 +40,16 @@
     "video": null
   },
   {
+    "id": "p007",
+    "title": "JIU-JITSU FEST",
+    "category": "evento",
+    "thumb": "img/Producciones/juijutsu.jpg",
+    "image": "img/Producciones/juijutsu.jpg",
+    "year": 2024,
+    "description": "",
+    "video": null
+  },
+  {
     "id": "p006",
     "title": "Persiana",
     "category": "cine",
@@ -57,16 +67,6 @@
     "image": "img/Producciones/enzima.jpg",
     "year": 2020,
     "description": "Corto documental de ensayo experimental. ",
-    "video": null
-  },
-  {
-    "id": "p007",
-    "title": "JIU-JITSU FEST",
-    "category": "evento",
-    "thumb": "img/Producciones/juijutsu.jpg",
-    "image": "img/Producciones/juijutsu.jpg",
-    "year": 2024,
-    "description": "",
     "video": null
   }
 ]

@@ -126,7 +126,7 @@ section{
 
 #nosotros{
   display: flex;
-  height: 80vh;
+  height: 100vh;
   justify-content: center;
   align-items: center;
   scroll-margin-top: 0;
@@ -135,7 +135,6 @@ section{
 }
 
 #equipo{
-  min-height: 71vh;
   }
 
 .servicios-p img{
