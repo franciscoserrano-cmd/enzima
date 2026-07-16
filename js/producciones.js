@@ -19,17 +19,21 @@
     return delayMap[index % delayMap.length];
   }
 
-  function resetCardAnimation(card, index) {
-    card.className = `image disclose ${getDelayClass(index)}`;
-    card.classList.remove('show');
+  function resetCardAnimation(card, index, useReveal = false) {
+    if (useReveal) {
+      card.className = `image disclose ${getDelayClass(index)}`;
+      card.classList.remove('show');
+    } else {
+      card.className = 'image show';
+    }
     card.classList.remove('observed');
     card.style.opacity = '';
     card.style.transform = '';
   }
 
-  function createCard(p, index) {
+  function createCard(p, index, useReveal = false) {
     const div = document.createElement('div');
-    resetCardAnimation(div, index);
+    resetCardAnimation(div, index, useReveal);
     div.setAttribute('data-name', p.category);
     div.setAttribute('data-id', p.id);
 
@@ -56,26 +60,28 @@
   }
 
   const filterItem = document.querySelector('.items');
-  function renderGallery(filterName = 'all') {
+  function renderGallery(filterName = 'all', useReveal = false) {
     gallery.innerHTML = '';
     const filteredProductions = filterName === 'all'
       ? productions
       : productions.filter((p) => p.category === filterName);
 
-    filteredProductions.forEach((p, index) => gallery.appendChild(createCard(p, index)));
+    filteredProductions.forEach((p, index) => gallery.appendChild(createCard(p, index, useReveal)));
 
-    requestAnimationFrame(() => {
-      if (window.observeReveals) {
-        window.observeReveals();
-      }
-    });
+    if (useReveal) {
+      requestAnimationFrame(() => {
+        if (window.observeReveals) {
+          window.observeReveals();
+        }
+      });
+    }
   }
 
   function applyFilter(filterName) {
-    renderGallery(filterName);
+    renderGallery(filterName, false);
   }
 
-  renderGallery('all');
+  renderGallery('all', true);
 
   if (filterItem) {
     filterItem.addEventListener('click', (ev)=>{
