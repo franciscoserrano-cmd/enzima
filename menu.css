@@ -17,20 +17,6 @@
     box-sizing: border-box;
 }
 
-@media (max-width: 1200px) {
-    .navbar {
-        padding-right: 40px;
-        padding-left: 40px;
-    }
-}
-
-@media (max-width: 900px) {
-    .navbar {
-        padding-right: 20px;
-        padding-left: 20px;
-    }
-}
-
 .logo-1 img{
     height: 40px; 
     width: 58px; 
@@ -54,7 +40,7 @@
 }
 
 .menu-toggle {
-    display: flex;
+    display: none;
     font-size: 1.5em;
     color: white;
     cursor: pointer;
@@ -89,6 +75,10 @@
   text-shadow: none;
   color: black;
 
+}
+
+.navbar li a:hover{
+    color: white;
 }
 
 @media (max-width: 800px) {
@@ -166,6 +156,16 @@
       }
     }
 
-.navbar li a:hover{
-    color: white;
+    @media (max-width: 1200px) {
+    .navbar {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+}
+
+@media (max-width: 900px) {
+    .navbar {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
 }
