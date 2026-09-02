@@ -41,20 +41,21 @@
 }
 
 .gallery{
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
   margin-top: 30px;
-  align-items: center;
+  align-items: start;
   justify-content: center;
-  gap: 18px;
+  gap: 6px;
 }
 .gallery .image{
-  flex: 0 1 calc((100% - 36px) / 3);
-  width: calc((100% - 36px) / 3);
+  width: 100%;
   max-width: 340px;
-  padding: 7px;
+  min-width: 0;
+  padding: 6px;
   position: relative;
   cursor: pointer;
+  justify-self: center;
 }
 
 .gallery .image span{
@@ -122,11 +123,14 @@
 }
 
 @media (max-width: 1000px) {
-  .gallery .image{
-    width: calc(100% / 3);
-    max-width: 266px;
+  .gallery {
+    grid-template-columns: repeat(2, minmax(180px, 1fr));
+    gap: 6px;
   }
-    .wrapper nav .items{
+  .gallery .image {
+    max-width: 290px;
+  }
+  .wrapper nav .items{
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -139,9 +143,12 @@
   nav .items span{
     padding: 7px 15px;
   }
-  .gallery .image{
-    width: calc(100% / 3);
-    max-width: 200px;
+  .gallery {
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
+    gap: 5px;
+  }
+  .gallery .image {
+    max-width: 220px;
   }
 }
 @media (max-width: 600px) {
@@ -155,8 +162,11 @@
   nav .items span{
     margin: 5px;
   }
-  .gallery .image{
-    width: calc(100% - 20px);
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+  .gallery .image {
+    width: min(100%, 460px);
     max-width: 460px;
     margin: 0 auto;
   }
