@@ -1,3 +1,5 @@
+
+
 .navbar{
     display: flex;
     font-family: "Lato", sans-serif;
@@ -74,12 +76,9 @@
 .letra-menu.scrolled{
   text-shadow: none;
   color: black;
-
 }
 
-.navbar li a:hover{
-    color: white;
-}
+
 
 @media (max-width: 800px) {
       .navbar {
@@ -90,42 +89,38 @@
         right: 0;
         background-color: cyan;
         width: 100%;
-        max-width: 100%;
         transform: translateY(-100%);
-        height: auto;
-        min-height: 60px;
+        height: 350px;
         z-index: 1001;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: stretch;
         transition: transform 0.35s ease;
         padding: 0;
         box-sizing: border-box;
       }
 
-      .menu {
+      .menu { 
         display: flex;
         flex-direction: column;
         transition: max-height 0.35s ease;
         gap: 10px;
-        padding: 10px 0 18px;
-        margin: 0;
-        margin-top: 60px;
-        width: 100%;
+        padding-top: 25px;
+        margin: auto;
+        margin-bottom: 0;
+
       }
 
       .navbar.active{
-        transform: translateY(0);
+        transform: translateY(3%);
         display: flex;
         position: fixed;
+        align-items: center;
       }
       
-      .menu-toggle {
+      .menu-toggle{
         display: flex;
         position: absolute;
         top: 12px;
         right: 18px;
-        z-index: 1003;
+        z-index: 1001;
         cursor: pointer;
         background: transparent;
         border: none;
@@ -146,7 +141,7 @@
         height: 60px;
         width: 100%;
         max-width: 100%;
-        background: cyan;
+        background-color: cyan;
         z-index: 1002;
         box-sizing: border-box;
       }
