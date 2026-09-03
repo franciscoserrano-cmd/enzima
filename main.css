@@ -374,13 +374,32 @@ section{
 .video-index{
     position: relative;
     width: 100%;
-    height: 100vh;    
+    height: 100vh;
 }
 
 video{
     width: 100%;
     height: 100%;
     object-fit:cover;
+}
+
+@media (max-width: 800px) {
+
+  .video-index{
+    width: 100vw;
+    height: 100vh;
+  }
+  video{
+    object-fit: contain;
+  }
+  .background-video-responsive{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+
+  }
 }
 
 .productions-modal{

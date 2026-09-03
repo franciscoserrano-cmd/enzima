@@ -177,7 +177,7 @@
 @media(max-width: 768px){
 
     .featured {
-        max-width: 100%;
+        max-width: 90%;
     }
     .featured-content{
         width: min(400px, 100%);
