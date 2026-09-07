@@ -12,6 +12,11 @@
     margin: auto;
 }
 
+.gallery-container-main{
+    justify-content: center;
+    align-items: center;
+}
+
 .gallery-imagen{
     position: relative;
     border-radius: 50%;
@@ -73,6 +78,9 @@
 }
 
 /*preview del equipo*/
+
+.featured-main{
+}
 
 .featured {
     position: relative;

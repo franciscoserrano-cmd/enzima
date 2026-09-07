@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 
 html{
@@ -55,10 +54,6 @@ h3, h4, p, span{
     font-family: "Inter", sans-serif;
     font-size: 18px;
     font-weight: 150;
-}
-
-.parrafo-nosotros{
-    line-height: 40px;
 }
 
 h2{
@@ -113,27 +108,41 @@ section{
     margin: 20px 0;
 }
 
-.nosotros-container{
+.nosotros-container-main{
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    scroll-margin-top: 0;
+    padding: 0;
+    margin: 0;
 }
 
-.nosotros-container-2 {
+
+.nosotros-container{
+  flex-direction: column;
+  display: flex;
   max-width: 800px;
   text-align: center;
   justify-content: center;
+  height: 55vh;
+}
+
+.titulo-nosotros{
+  align-self: flex-start;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #nosotros{
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-  scroll-margin-top: 0;
-  padding: 0;
-  margin: 0;
+  scroll-margin-top: 50px;
+}
+
+.parrafo-nosotros{
+    line-height: 40px;
+    justify-content: center;
+    align-items: center;
 }
 
 .servicios-p img{
@@ -398,9 +407,10 @@ video{
     width: 100%;
     height: 100vh;
     background-color: black;
-
   }
 }
+
+/* Estilo galeria equipo*/
 
 .productions-modal{
   display: none;
