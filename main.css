@@ -129,6 +129,12 @@ section{
   height: 55vh;
 }
 
+@media(max-width: 800px){
+  .nosotros-container{
+    height: 70vh;
+  }
+}
+
 .titulo-nosotros{
   align-self: flex-start;
   margin-left: auto;
