@@ -19,21 +19,21 @@
     return delayMap[index % delayMap.length];
   }
 
-  function resetCardAnimation(card, index, useReveal = false) {
+  function resetCardAnimation(card, index, useReveal = false, animate = true) {
     if (useReveal) {
       card.className = `image disclose ${getDelayClass(index)}`;
       card.classList.remove('show');
     } else {
-      card.className = 'image show';
+      card.className = animate ? 'image show' : 'image';
     }
     card.classList.remove('observed');
     card.style.opacity = '';
     card.style.transform = '';
   }
 
-  function createCard(p, index, useReveal = false) {
+  function createCard(p, index, useReveal = false, animate = true) {
     const div = document.createElement('div');
-    resetCardAnimation(div, index, useReveal);
+    resetCardAnimation(div, index, useReveal, animate);
     div.setAttribute('data-name', p.category);
     div.setAttribute('data-id', p.id);
 
@@ -60,13 +60,13 @@
   }
 
   const filterItem = document.querySelector('.items');
-  function renderGallery(filterName = 'all', useReveal = false) {
+  function renderGallery(filterName = 'all', useReveal = false, animate = true) {
     gallery.innerHTML = '';
     const filteredProductions = filterName === 'all'
       ? productions
       : productions.filter((p) => p.category === filterName);
 
-    filteredProductions.forEach((p, index) => gallery.appendChild(createCard(p, index, useReveal)));
+    filteredProductions.forEach((p, index) => gallery.appendChild(createCard(p, index, useReveal, animate)));
 
     if (useReveal) {
       requestAnimationFrame(() => {
@@ -81,7 +81,7 @@
     renderGallery(filterName, false);
   }
 
-  renderGallery('all', true);
+  renderGallery('all', true, false);
 
   if (filterItem) {
     filterItem.addEventListener('click', (ev)=>{

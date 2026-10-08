@@ -1,4 +1,18 @@
 
+const introVideo = document.querySelector('.video-index video');
+if (introVideo) {
+  introVideo.muted = true;
+  const startIntroVideo = () => {
+    const playback = introVideo.play();
+    if (playback && typeof playback.catch === 'function') {
+      playback.catch(() => {});
+    }
+  };
+
+  startIntroVideo();
+  introVideo.addEventListener('canplay', startIntroVideo, { once: true });
+}
+
 window.onscroll = function () {
   let navbar = document.getElementById("navbar");
   let letras = document.querySelectorAll(".letra-menu");
