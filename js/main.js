@@ -43,7 +43,10 @@ window.onscroll = function () {
 
 
 const thumbnails = document.querySelectorAll('.gallery-slide');
+const teamSection = document.querySelector('#equipo');
 const featured = document.querySelector('.featured');
+const featuredContent = document.querySelector('.featured-content');
+const galleryContainer = document.querySelector('.gallery-container-main');
 const featuredImg = document.querySelector('.featured-img');
 const description = document.querySelector('.description');
 const title = document.querySelector('.title-description');
@@ -56,26 +59,28 @@ let currentIndex = -1;
 function showFeaturedImage(index) {
     if (index < 0 || index >= thumbnails.length) return;
 
-    thumbnails.forEach(t => t.classList.remove('hidden'));
-
     const thumbnail = thumbnails[index];
-    thumbnail.classList.add('hidden');
 
     const img = thumbnail.querySelector('img');
     const h2 = thumbnail.querySelector('h2');
     const p = thumbnail.querySelector('p');
 
     if (img && h2 && p) {
+        const isOpening = currentIndex === -1;
+        teamSection.classList.add('has-featured');
         featured.style.display = 'flex';
         featuredImg.src = img.src;
         featuredImg.alt = img.alt || h2.textContent;
         title.textContent = h2.textContent;
         description.textContent = p.textContent;
 
-        document.getElementById('featured-img-id')
-            .scrollIntoView({ behavior: 'smooth', block: 'center' });
-
         currentIndex = index;
+
+      if (isOpening) {
+        requestAnimationFrame(() => {
+          featuredContent.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+      }
     }
 }
 
@@ -99,10 +104,12 @@ arrowRight.addEventListener('click', () => {
 
 closeBtn.addEventListener('click', () => {
     featured.style.display = 'none';
+  teamSection.classList.remove('has-featured');
     currentIndex = -1;
-    thumbnails.forEach(t => t.classList.remove('hidden')); 
-    
-    thumbnails.scrollIntoView({ behavior: 'smooth', block: 'start' })});
+    requestAnimationFrame(() => {
+        galleryContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  });
 
 const toggleBtn = document.querySelector('.menu-toggle');
 const navbar = document.querySelector('.navbar');

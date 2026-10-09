@@ -12,9 +12,36 @@
     margin: auto;
 }
 
+#equipo{
+    display: flex;
+    flex-direction: column;
+    min-height: max(100vh, 600px);
+    min-height: max(100svh, 600px);
+    scroll-margin-top: 0;
+}
+
+#equipo > .titulo{
+    width: 100%;
+    margin: 0;
+    padding-top: 50px;
+}
+
+#equipo > .titulo h1{
+    margin: 0;
+}
+
 .gallery-container-main{
+    display: flex;
+    flex: 1 0 auto;
+    width: 100%;
     justify-content: center;
     align-items: center;
+}
+
+.gallery-container{
+    width: 100%;
+    align-content: center;
+    padding: 24px;
 }
 
 .gallery-imagen{
@@ -31,12 +58,6 @@
     border-radius: 50%;
     object-fit:cover;
     transition: transform 0.4s ease;
-}
-
-.gallery-slide.hidden{
-    opacity: 0;
-    pointer-events: none;
-    transform: scale(0.8);
 }
 
 .gallery-slide-p{
@@ -80,17 +101,31 @@
 /*preview del equipo*/
 
 .featured-main{
+    width: 100%;
+}
+
+#equipo.has-featured .featured-main{
+    display: grid;
+    min-height: 100vh;
+    min-height: 100svh;
+    place-items: center;
+    padding: 24px;
+}
+
+#equipo.has-featured .featured{
+    margin: 0 auto;
 }
 
 .featured {
     position: relative;
     display: none;
     flex-direction: column;
-    max-width: 70%;
+    width: min(100% - 48px, 1000px);
+    max-width: 1000px;
     align-items: center;
     transition: opacity 0.3s;
     margin: auto;
-    margin-top: 50px;
+    margin-bottom: 40px;
 }
 
 .hr-featured{
@@ -177,6 +212,7 @@
 .featured-content:hover .next {
     opacity: 1;
 }
+
 .active {
     opacity: 1;
     position: relative;
