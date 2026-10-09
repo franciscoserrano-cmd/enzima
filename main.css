@@ -109,46 +109,47 @@ section{
 }
 
 .nosotros-container-main{
+    position: relative;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    min-height: max(100vh, 560px);
+    min-height: max(100svh, 560px);
     scroll-margin-top: 0;
     padding: 0;
     margin: 0;
 }
 
-
 .nosotros-container{
-  flex-direction: column;
-  display: flex;
-  max-width: 800px;
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 0 clamp(20px, 7vw, 100px);
   text-align: center;
-  justify-content: center;
-  height: 55vh;
-}
-
-@media(max-width: 800px){
-  .nosotros-container{
-    height: 70vh;
-  }
 }
 
 .titulo-nosotros{
-  align-self: flex-start;
-  margin-left: auto;
-  margin-right: auto;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+}
+
+#nosotros .titulo-nosotros h1{
+  margin: 0;
+  transform: none;
 }
 
 #nosotros{
   scroll-margin-top: 50px;
 }
 
+#nosotros .nosotros-container .disclose{
+  width: min(100%, 800px);
+  transform: none;
+}
+
 .parrafo-nosotros{
-    line-height: 40px;
-    justify-content: center;
-    align-items: center;
+    line-height: 1.65;
 }
 
 .servicios-p img{
