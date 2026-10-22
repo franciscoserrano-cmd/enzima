@@ -103,25 +103,12 @@
 .gallery .image.hide{
   display: none;
 }
-.gallery .image.show{
-  animation: animate 0.4s ease;
-}
-
 @media (hover: none) and (pointer: coarse) {
   .gallery .image .production-meta{
     opacity: 1;
     background: linear-gradient(180deg, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.72) 100%);
   }
 }
-@keyframes animate {
-  0%{
-    transform: scale(0.5);
-  }
-  100%{
-    transform: scale(1);
-  }
-}
-
 @media (max-width: 1000px) {
   .gallery {
     grid-template-columns: repeat(2, minmax(180px, 1fr));

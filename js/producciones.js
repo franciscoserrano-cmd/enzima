@@ -78,7 +78,7 @@
   }
 
   function applyFilter(filterName) {
-    renderGallery(filterName, false);
+    renderGallery(filterName, true, false);
   }
 
   renderGallery('all', true, false);
