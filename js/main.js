@@ -1,16 +1,44 @@
 
 const introVideo = document.querySelector('.video-index video');
 if (introVideo) {
+  introVideo.autoplay = true;
+  introVideo.loop = true;
+  introVideo.defaultMuted = true;
   introVideo.muted = true;
+
+  let playRequestInFlight = false;
+  const retryEvents = ['touchstart', 'pointerdown', 'click', 'keydown'];
+  const removePlaybackRetries = () => {
+    retryEvents.forEach((eventName) => {
+      document.removeEventListener(eventName, startIntroVideo);
+    });
+    document.removeEventListener('visibilitychange', handleVisibilityChange);
+  };
   const startIntroVideo = () => {
+    if (!introVideo.paused || playRequestInFlight) return;
+
+    playRequestInFlight = true;
     const playback = introVideo.play();
-    if (playback && typeof playback.catch === 'function') {
-      playback.catch(() => {});
+    if (playback && typeof playback.then === 'function') {
+      playback.then(removePlaybackRetries).catch(() => {
+        playRequestInFlight = false;
+      });
+    } else {
+      playRequestInFlight = false;
     }
+  };
+  const handleVisibilityChange = () => {
+    if (document.visibilityState === 'visible') startIntroVideo();
   };
 
   startIntroVideo();
-  introVideo.addEventListener('canplay', startIntroVideo, { once: true });
+  introVideo.addEventListener('loadeddata', startIntroVideo);
+  introVideo.addEventListener('canplay', startIntroVideo);
+  introVideo.addEventListener('playing', removePlaybackRetries, { once: true });
+  retryEvents.forEach((eventName) => {
+    document.addEventListener(eventName, startIntroVideo, { passive: true });
+  });
+  document.addEventListener('visibilitychange', handleVisibilityChange);
 }
 
 window.onscroll = function () {
